@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}
+
+\draw (0,0) rectangle (4,4); % Desenha um quadrado de (0,0) a (4,4)
+\node at (2,4.25) {$X$}; % Adiciona a etiqueta "X" acima do quadrado
+
+\draw (4,4) -- (6,4); % linha que representa Y
+\node at (5,4.25) {$Y$}; % Adiciona a etiqueta "Y" acima da linha
+
+\draw (0,2) -- (4,2); % Desenha uma linha horizontal para dividir o quadrado ao meio na horizontal
+\node at (-0.25,2) {\(\frac{{b}}{2}\)}; % Adiciona a etiqueta "b/2" a esquerda do quadrado
+
+\draw (0,2) rectangle (3,4); % Desenha um retangulo de (0,2) a (3,4)
+\node at (0.25,3) {$Y$}; % Adiciona a etiqueta "Y" 
+\node at (1.5,3.7) {\(\frac{{b}}{2}\)}; % Adiciona a etiqueta "b/2" 
+
+\draw (0,2) rectangle (2,1); % Desenha um retangulo de (0,2) a (2,1)
+\node at (-0.5,1) {\(\frac{{X - Y}}{2}\)}; % Adiciona a etiqueta "(X-Y)/2" 
+
+\draw[dashed] (2,1) rectangle (3,2); % Desenha um quadrado de linha tracejada nas coordenadas (2,1) e (3,2)
+
+\draw (3,-0.15) -- (3,0.15); 
+\node at (3,-0.5) {\(\frac{{X - Y}}{2}\)}; % Adiciona a etiqueta "(X-Y)/2" 
+
+\end{tikzpicture}
+
+\end{document}
+

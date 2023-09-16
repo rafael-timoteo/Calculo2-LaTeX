@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}
+
+\draw (0,0) rectangle (4,4); % Desenha um quadrado de (0,0) a (4,4)
+\node at (2,2) {$X^2$}; % Adiciona a etiqueta "X²" ao centro do quadrado
+\node at (2,4.25) {$X$}; % Adiciona a etiqueta "X" acima do quadrado
+
+\draw (4,0) rectangle (6,4); % Desenha um retângulo à direita do quadrado
+\node at (5,4.25) {$b$}; % Adiciona a etiqueta "b" acima do retangulo
+\node at (5,2) {$bX$}; % Adiciona a etiqueta "bX" ao centro do retangulo
+
+\draw (5,0) -- (5,4); % Desenha uma linha vertical para separar o retângulo à direita ao meio
+
+\draw (0,0) rectangle (4,-1); % Desenha um retângulo abaixo do quadrado
+\node at (-0.25,-0.5) {\(\frac{{b}}{2}\)}; % Adiciona a etiqueta "b/2" ao lado esquerdo do retângulo inferior
+
+\end{tikzpicture}
+
+\end{document}

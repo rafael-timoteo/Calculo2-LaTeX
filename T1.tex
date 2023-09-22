@@ -1,0 +1,1102 @@
+\documentclass{article}
+
+\usepackage{ulem}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{lipsum}
+\usepackage{cancel} 
+\usepackage{tikz}
+\usepackage{graphicx} 
+\usepackage{float} 
+\usepackage{pifont}
+\usepackage[most]{tcolorbox}
+
+\newtheorem*{theorem}{Teorema}
+\newtheorem*{corollary}{Corolário}
+\newtheorem*{lemma}{Lema}
+
+\renewcommand{\proofname}{\uline{Demonstração}}
+
+\newcounter{examplecounter}
+\newenvironment{exemplo}{\begin{quote}%
+    \refstepcounter{examplecounter}%
+  \textbf{Exemplo \arabic{examplecounter}}%
+  \quad
+}{%
+\end{quote}%
+}
+
+\newtcbtheorem{exercise}{Exercício}%
+{ % frame stuff
+    enhanced,frame empty,interior empty,
+    colframe=blue,
+    borderline west={1pt}{0pt}{green!25!blue},
+    left=0.2cm,
+    % title stuff
+    attach boxed title to top left={yshift=-2mm,xshift=-2mm},
+    coltitle=black,
+    fonttitle=\bfseries,
+    colbacktitle=white,
+    boxed title style={boxrule=.4pt,sharp corners}}{exercise}
+
+\title{Trabalho 1 - ACH2012 Cálculo II}
+\author{
+  André Caravalho\\
+  \texttt{Número USP: 13672425}
+  \and
+  Alex Zhu Guangxiao\\
+  \texttt{Número USP: 13672130}
+  \and
+  Cayo Felipe Barbosa Félix Soares\\
+  \texttt{Número USP: 13719520}
+  \and
+  Christiano Bernini Peres\\
+  \texttt{Número USP: 5198251}
+  \and
+ Danilo Araujo de Oliveira Romeira\\
+  \texttt{Número USP: 13725823}
+  \and
+ Eduardo Crispim de Moraes\\
+  \texttt{Número USP: 14567051}
+  \and
+ Egydio Pacheco Neto\\
+  \texttt{Número USP: 9849160}
+  \and
+ Felipe Akira Dias\\
+  \texttt{Número USP: 13673051}
+  \and
+ Frederico Sant'Anna Kimura\\
+  \texttt{Número USP: 13831526}
+  \and
+ Gabriel Chen Hirata\\
+  \texttt{Número USP: 13747946}
+  \and
+ Helena Cota Furtado\\
+  \texttt{Número USP: 13835173}
+  \and
+ João Victor Andrade Lucio\\
+  \texttt{Número USP: 11207877}
+  \and
+ Júlia Du Bois Araújo Silva\\
+  \texttt{Número USP: 14584360}
+  \and
+ Pedro Henrique Resnitzky Barbedo\\
+  \texttt{Número USP: 14657691}
+  \and
+ Rafael Francisco de Freitas Timoteo\\
+  \texttt{Número USP: 12924740}
+  \and
+ Rafael Moura de Almeida\\
+  \texttt{Número USP: 11225505}
+  \and
+ Samuel Antonio Silva\\
+  \texttt{Número USP: 13903209}
+}
+\date{}
+
+\begin{document}
+
+\maketitle
+\pagebreak
+
+% ===========================PAG_1===============================
+
+\begin{center}
+\section*{Equações Quadráticas}
+\end{center}
+
+\[
+    x^2 + bx = c \Rightarrow, x = ?
+\]
+
+\begin{tikzpicture}
+
+\draw (0,0) rectangle (4,4); % Desenha um quadrado de (0,0) a (4,4)
+\node at (2,2) {$X^2$}; % Adiciona a etiqueta "X²" ao centro do quadrado
+\node at (2,4.25) {$X$}; % Adiciona a etiqueta "X" acima do quadrado
+
+\draw (4,0) rectangle (6,4); % Desenha um retângulo à direita do quadrado
+\node at (5,4.25) {$b$}; % Adiciona a etiqueta "b" acima do retangulo
+\node at (5,2) {$bX$}; % Adiciona a etiqueta "bX" ao centro do retangulo
+
+\draw (5,0) -- (5,4); % Desenha uma linha vertical para separar o retângulo à direita ao meio
+
+\draw (0,0) rectangle (4,-1); % Desenha um retângulo abaixo do quadrado
+\node at (-0.25,-0.5) {\(\frac{{b}}{2}\)}; % Adiciona a etiqueta "b/2" ao lado esquerdo do retângulo inferior
+\end{tikzpicture}
+
+\[
+c = x^2 + bx
+\]
+
+\[
+= (x+b/2)^2 - (b/2)^2
+\]
+
+\[
+\therefore (x+b/2)^2 = (b/2)^2 + c
+\]
+
+\[
+x + b/2 = \sqrt{(b/2)^2 + c}
+\]
+
+\[
+\boxed{x =  -b/2 + \sqrt{(b/2)^2 + c}} = -b/2 + \frac{\sqrt{(b^2 + 4c}}{2}
+\]
+
+\[
+(\frac{b}{2})^2 + c = \frac{b^2}{4} + c = \frac{b^2 + 4c}{4}
+\]
+
+\[
+ax^2 + bx = c \Rightarrow x = ax^2 + bx - c \Rightarrow
+\]
+
+\[
+a^2x^2 - abx = -ac
+\]
+
+\[
+ax^2 + b(ax) = -ac
+\]
+
+
+% ===========================PAG_2===============================
+
+\[
+ax = \frac{-b}{2} + \frac{\sqrt{(b^2 - 4ac}}{2} \Rightarrow \boxed{x = \frac{-b + \sqrt{(b^2 - 4ac}}{2a}}
+\]
+
+Katz.pp.23-5. 
+5000 a.c. 
+1700 a.c. Hammurabi
+
+\[
+(ax + b/2)^2 - [(\frac{b}{2})^2 - ac]
+\]
+
+\pagebreak
+
+\begin{tikzpicture}
+
+\draw (0,0) rectangle (4,4); % Desenha um quadrado de (0,0) a (4,4)
+\node at (2,4.25) {$X$}; % Adiciona a etiqueta "X" acima do quadrado
+
+\draw (4,4) -- (6,4); % linha que representa Y
+\node at (5,4.25) {$Y$}; % Adiciona a etiqueta "Y" acima da linha
+
+\draw (0,2) -- (4,2); % Desenha uma linha horizontal para dividir o quadrado ao meio na horizontal
+\node at (-0.25,2) {\(\frac{{b}}{2}\)}; % Adiciona a etiqueta "b/2" a esquerda do quadrado
+
+\draw (0,2) rectangle (3,4); % Desenha um retangulo de (0,2) a (3,4)
+\node at (0.25,3) {$Y$}; % Adiciona a etiqueta "Y" 
+\node at (1.5,3.7) {\(\frac{{b}}{2}\)}; % Adiciona a etiqueta "b/2" 
+
+\draw (0,2) rectangle (2,1); % Desenha um retangulo de (0,2) a (2,1)
+\node at (-0.5,1) {\(\frac{{X - Y}}{2}\)}; % Adiciona a etiqueta "(X-Y)/2" 
+
+\draw[dashed] (2,1) rectangle (3,2); % Desenha um quadrado de linha tracejada nas coordenadas (2,1) e (3,2)
+
+\draw (3,-0.15) -- (3,0.15); 
+\node at (3,-0.5) {\(\frac{{X - Y}}{2}\)}; % Adiciona a etiqueta "(X-Y)/2" 
+
+\end{tikzpicture}
+
+\[
+x + y = b
+\]
+\[
+xy = c
+\]
+
+\[
+Se x = y \Rightarrow
+\begin{cases}
+    \ 2x + b \Rightarrow x = b/2\\
+    \ x^2 = c \Rightarrow (\frac{b}{2})^2 = c\\
+    \ b^2 = 4c.
+\end{cases}
+\]
+
+Suponha $x > y$
+
+\[
+b = x + y = \overline{x} + 2y - \overline{y}
+\]
+
+\[
+\therefore \frac{b}{2} = y + \frac{x - y}{2}.
+\]
+
+\[
+b = x + y = 2x - x + y
+\]
+
+\[
+\therefore \frac{b}{2} = x - \frac{x - y}{2}
+\]
+
+\[
+x - b/2 = \frac{x - y}{2}
+\]
+
+\[
+c = xy = (\frac{b}{2})^2 - (\frac{x - y}{2})^2
+\]
+
+\[
+= (\frac{b}{2})^2 - (x - b/2)^2
+\]
+
+\[
+\therefore (x - b/2)^2 = (b/2)^2 - c
+\]
+
+\[
+x - b/2 = \sqrt{(b/2)^2 - c}
+\]
+
+\[
+x = + b/2 + \sqrt{(b/2)^2 - c} = \frac{b}{2} + \frac{\sqrt{b^2 - 4c}}{2}
+\]
+
+\[
+x (b - x) = c
+\]
+
+\[
+bx - x^2 = c
+\]
+
+\[
+x^2 - bx + c = 0 
+\]
+
+\[
+x^2 - bx = -c
+\]
+
+% ===========================PAG_3===============================
+\pagebreak
+Sejam $p, q \in \mathbb{R}$ dados. O problema consiste em encontrar $x$ e $y$ tais que:
+
+\[
+\left\{
+\begin{array}{cc}
+   x +  y = p \\
+   x \cdot y = q
+\end{array}
+\right.
+\]
+
+Observe que $x + y = p \Rightarrow y = p - x$. Portanto, $q = xy = x(p - x)$.
+
+Logo, tem-se:
+\begin{align*}
+&\boxed{x \cdot (p - x) = q} \tag{1} \\
+&xp - x^2 = q \leftrightarrow \boxed{x^2 - xp + q = 0} \tag{2}
+\end{align*}
+
+\underline{Observação:} Se $x$ é uma solução da equação acima, então $p - x$ também é uma solução. Com efeito, observe que a equação (1) é \underline{invariante} pela substituição de $x$ por $p - x$, ou seja:
+
+\[
+q = (p - x) (p - (p-x)) = (p-x)(p - p + x) = x (p - x).
+\]
+
+Uma prova alternativa usando (2) pode ser obtida analogamente, ou seja:
+
+\[
+(p-x)^2 - (p-x) p + q = (p - x)(\cancel{p} - x - \cancel{p}) + q = q - x (p-x) = 0.
+\]
+seu $(1) \leftrightarrow (2)$.
+
+
+\textbf{Raízes}: x = $\frac{p \pm \sqrt{p^2 - 4q}}{2}$
+
+% ===========================PAG_4===============================
+
+Observe que as raízes são reais se $p^2 - 4q \geq 0 \leftrightarrow p^2 \geq 4q \leftrightarrow q \leq \frac{p^2}{4}$. Portanto, o valor máximo de $q$ é $\frac{p^2}{4}$. Graficamente, basta observar que: 
+$$\frac{p^2}{4} = \frac{p}{2} \cdot \frac{p}{2}$$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{Figuras_Graficos/Grafico pag 4.png}
+    \label{Grafico pag4}
+\end{figure}
+
+\pagebreak
+
+\begin{exemplo}
+Dentre todos os retângulos de perímetros $P$, existe algum com área máxima?
+
+\begin{tikzpicture}
+
+\draw (0,0) rectangle (4,2); % Desenha um quadrado de (0,0) a (4,4)
+\node at (-0.25,1) {$Y$}; % Adiciona a etiqueta "Y" ao lado quadrado
+\node at (2,-0.25) {$X$}; % Adiciona a etiqueta "X" abaixo do quadrado
+
+\end{tikzpicture}
+
+\begin{align*}
+&P = 2x + 2y = 2(x+y) \\
+&A = x \cdot y \\
+&\therefore x + y = \frac{P}{2} = p \\
+&xy = A = q \therefore q \\
+&\therefore \text{ é máximo } \rightarrow x = \frac{p \pm 0}{2} = \frac{p}{2} = \frac{P}{4} \\
+&\therefore y = p - x = \frac{P}{2} - \frac{p}{4} = \frac{P}{4} = x. \quad \therefore \text{é um \underline{quadrado}}.
+\end{align*}
+
+Observe que: $q_{\text{max}} = x \cdot y = \frac{P^2}{4^2} = \frac{\frac{P^2}{4}}{4} = \frac{\left(\frac{P}{2}\right)^2}{4}
+= \frac{p^2}{4}$.
+\end{exemplo}
+
+% ===========================PAG_5===============================
+\pagebreak
+\section*{Forma Canônica}
+
+\begin{theorem}
+   Toda função quadrática $f(x) = ax^2+bx+c\;(a\neq0)$ pode ser expressado na forma: $f(x) = a(x-m)^2 + k$, onde $m = -b/2a$ e $k = f(m)$. 
+\end{theorem}
+
+
+\begin{proof}\mbox{}\\*
+Basta observar que:
+\begin{align*}
+f(x) &= a(x^2+ \frac{b}{a}x + \frac{c}{a}) \\
+&= a\left(x^2 + 2 \frac{b}{2a}x + \left(\frac{b}{2a} \right)^2 - \left(\frac{b}{2a} \right)^2 + \frac{c}{a}\right) \\
+&= a\left(x + \frac{b}{2a}\right)^2 + c - \frac{\cancel{a}b^2}{4\cancel{a^2}} \\
+&= a\left(x + \frac{b}{2a}\right)^2 + \frac{4ac - b^2}{4a} \\
+&\therefore \;m = -b/2a \text{  e  } k = \frac{4ac - b^2}{4a}
+\end{align*}
+\end{proof}
+$\text{obviamente, } f(m) = a (m-m)^2 + k = 0 + k = k.$
+
+
+\begin{corollary}
+Se $f(x_1) = f(x_2)$ com $x_1 \neq x_2$, então $m = \frac{x_1 + x_2}{2}$.
+\end{corollary}
+
+\begin{proof}
+\begin{align*}
+   &\cancel{a}(x_1-m)^2 + k = f(x_1) = f(x_2) = \cancel{a}(x_2-m)^2 + k \rightarrow \\
+   &\rightarrow x1-m = \pm (x_2-m). \text{ Se } x_1-\cancel{m} = x_2-\cancel{m} => x_1 = x_2. \\
+   &\text{ Se } x_1-m = -(x_2-m) = -x_2+m => x_1+x_2 = 2m => m=\frac{x_1+x_2}{2}
+\end{align*}
+\end{proof}
+
+% ===========================PAG_6===============================
+\pagebreak
+\begin{corollary}
+$m = min\;\{f(x): x\in R\}. $ se $a>0$, ou máx se $a>0$.
+\end{corollary}
+
+
+\begin{proof}
+\[f(x) = a(\underbrace{x-m}_{\geq 0})^2 + k.\text{ Logo o valor minímo ocorre se } x-m = 0 \Longleftrightarrow x=m. \]
+\end{proof}
+
+
+\begin{corollary}
+    $f(2m-x) = f(x).$
+\end{corollary}
+
+\begin{proof}
+\begin{align*}
+    f(2m-x) &= a(\cancel{2}m-x-\cancel{m})^2 + k = a(m-x)^2+k = f(x) \\
+    \therefore \; f(m+x) &= f(2m - (m+x)) = f(\cancel{2}m-\cancel{m}-x) \\
+    &=f(m-x).
+\end{align*}
+\end{proof}
+
+
+Em particular, f é simétrico com relação à linha vertical x=m.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{Figuras_Graficos/Grafico pag 6.png}
+    \label{Grafico pag6}
+\end{figure}
+
+\begin{align*}
+    f(m+x) &= a(\cancel{m}+x-\cancel{m})^2 + k = ax^2+k = a(-x)^2+k \\
+    &=a(m-x-m)^2 + k = f(m-x).
+\end{align*}
+
+% ===========================PAG_7===============================
+\pagebreak
+\subsection*{\underline{Gráfico: A Parábola}}
+
+\begin{flushleft}
+Considere f(x) = $ax^2$, com a $\neq$ 0. \\
+Foco: F = (0,k) \\
+Diretriz D: y = -k.\\   
+\end{flushleft}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{Figuras_Graficos/Grafico pag 7.png}
+    \label{Grafico pag7}
+\end{figure}
+
+\begin{align*}
+    x^2 + (y-k)^2 &= d^2 = (y+k)^2\\
+    x^2+y^2 - 2yk + k^2 &= y^2 + 2yh + k^2  \\
+    x^2 - 2yk &= 2yk \Leftrightarrow 4yk = x^2.\\
+\end{align*}
+\[
+\therefore \space y=ax^2 \implies 4ax^2k = x^2 \implies k = \frac{1}{4a}
+\]
+Reciprocamente, $4yk = x^2 \implies y = \frac{1}{4k}x^2\implies f(x) = ax^2$, 
+com $a=\frac{1}{4k}\Leftrightarrow k = \frac{1}{4a}$. \\
+Portanto, o gráfico da função $f(x) = ax^2$, é uma \underline(parábola) com foco $F = (0,k)$ e 
+diretriz $y = -k$, com $k=\frac{1}{4a}$.\\
+Reciprocamente, toda parábola é gráfico de uma função $f(x) = ax^2$ com $a = \frac{1}{4k}$
+
+% ===========================PAG_8===============================
+\pagebreak
+
+\begin{corollary}
+    O gráfico de toda função quadrática é uma parábola.
+\end{corollary} 
+
+\begin{proof}\mbox{}\\*
+Basta usar a forma canônica: $f(x) = a(x-m)^2 + k$ pois $x-m$ é um deslocamento horizontal enquanto que $+k$ é um deslocamento vertical.
+\[
+g(x) = f(x+m) - k = a(x+m-m)^2 + k - k = ax^2
+\]
+É uma parábola $\implies g(x)+k=f(x+m)$ é a mesma parábola, deslocada verticalmente. $f(x) = g(x-m)+k$ é a mesma parábola, deslocada horizontalmente.
+\end{proof}
+
+Define-se a \underline(parábola) como o lugar geométrico dos pontos(x,y) 
+no plano que são equidistantes de uma reta D e um ponto F tal que F 
+$\notin$ D.\\
+Essa reta denomina-se \underline{diretriz} de parábolas, e que o ponto F é 
+o seu \underline{foco}.
+
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{Figuras_Graficos/Grafico pag 8.png}
+\end{figure}
+
+% ===========================PAG_9===============================
+\pagebreak
+
+Considere uma amostra de tamanho $N$ composta por apenas dois valores $a$ e $b$, $a \neq b$, com frequências respectivas $n$ e $N-n$, com $0 \leq n \leq N$.
+ 
+Em tal caso a média é dada por:
+ 
+\[ M = M(n) = \frac{n . a + (N-n) b}{N} = b - \frac{n(b-a)}{N} \textnormal{, função linear}\]
+Em particular, tem-se:
+\[\ M(1) = b - \frac{(b-a)}{N} \approx b  \textnormal{, se } N>> b-a\]
+Como também: 
+\[M(n) = b-(b-a) = a\]
+Por outro lado, o desvio padrão $s$ é dado por: 
+\begin{align*}
+(N-1)s^2 &= n(a-n)^2 + (N-n) (b-n)^2 \\
+ &= n (a-b + \frac{n}{N}(b-a))^2 + (N-n)(b-b+\frac{n}{N}(b-a))^2 \\
+ &= n (b-a)^2 (\frac{n}{N}-1)^2 + (N-n) (b-a)^2 (\frac{n}{N})^2 \\
+ &=(b-a)^2 [n((\frac{n}{N})^2 - 2\frac{n}{N}+1) +\frac{Nn^2}{N^2} -  n(\frac{n}{N})^2] \\
+ &=(b-a)^2 [n(\frac{n}{N})^2  - 2\frac{n}{N} +n +\frac{n}{N} -n (\frac{n}{N})^2]\\
+ &= - \frac{(b-a)^2}{N} (n^2 - nN) \\ 
+\therefore \frac{N(N-1)}{(b-a)^2}s^2 &= {-(n^2 - 2\frac{nN}{2} + (\frac{N}{2})^2-(\frac{N}{2})^2)} \\
+ &= - (n - \frac{N}{2})^2 + (\frac{N}{2})^2
+\end{align*}
+
+\[
+ \therefore \boxed{\frac{N(N-1)}{(b-a)^2}s^2 + (n - \frac{N}{2})^2 = (\frac{N}{2})^2}
+\]
+
+% ===========================PAG_10===============================
+
+\pagebreak
+
+\textbf{Desta maneira, resulta uma \underline{elipse} no plano (n,s):}
+
+
+\[
+\frac{s^2}{\frac{N^2}{4}\frac{(b-a^2)}{N(N-1)}} + (\frac{(n-\frac{n}{2}^2)}{(\frac{N}{2})^2}) = 1.
+\]
+
+\[
+\frac{S^2}{\frac{N(b-a)^2}{4(N-1)}} + \frac{(n-\frac{N}{2})^2}{(\frac{N}{2})^2} = 1.
+\]
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{Figuras_Graficos/Grafico pag 10.png}
+\end{figure}
+
+Ponto extremo (máximo): $n=\frac{n}{2}$
+
+Valor máximo: $\frac{N(N-1)s^2}{(b-a)^2}$ = $(\frac{N}{2})^2$ = $(\frac{N}{2}^2)$ = $\frac{N^2}{4}$ $\Rightarrow{}$ $s = \frac{b-a}{2}\sqrt{\frac{N}{N-1}}$.
+
+
+\textbf{Definindo o desvio padrão com N em lugar de N - 1, tem-se:}
+
+\begin{align*}
+    &\frac{(2s)^2}{(b-a)^2} + \frac{(2n - n)^2}{N^2} = 1. \quad \text{Definindo $x = 2n$ e $y = 2s$,} \\
+    &\text{resulta a elipse: $\frac{(x-n)^2}{N^2} + \frac{y^2}{(b-a)^2} = 1$.}  
+\end{align*}
+
+
+% ===========================PAG_11===============================
+\pagebreak
+
+\begin{theorem}
+    Seja $F$ diferenciável em a com $f'(a)>0$. Então existe $\delta > 0$ tal que: x $\in$ (a, a+$\delta$) $\Rightarrow{} f(x)>f(a)$ e \quad x $\in$ (a-$\delta$, a) $\Rightarrow{} f(x)<f(a)$.
+\end{theorem} 
+
+\begin{proof}\mbox{}\\*
+    Seja $\epsilon:= \frac{f'(a)}{2}>0$. \\
+    Por hipótese, existe $\delta>0$ tal que:
+\begin{align*} 
+    0 < |x - a| < \delta \Rightarrow |\frac{f(x) - f(x)}{x-a} - f'(a)| < \epsilon \\
+    \therefore -\epsilon < \frac{f(x) - f(a)}{a - a} - f'(a) < \epsilon. \\
+    f'(a) - \epsilon < \frac{f(x) - f(a)}{x - a} < f'(a) + \epsilon \\
+    \frac{f(x) - f(a)}{x - a} > f'(a) - \epsilon = f'(a) -\frac{f'(a)}{2} = \frac{f'(a)}{2} > 0 \\
+    \therefore a<x<a+\delta \Rightarrow f(x) > f(a) \\
+    \text{e} \quad a - \delta < x < a \Rightarrow f(x) < f(a).
+\end{align*}
+\end{proof}
+
+% ===========================PAG_12===============================
+\pagebreak
+
+\begin{exemplo}
+\[
+\text{Considere} \quad F(x) =
+\begin{cases}
+    \ x/2 + x^2sen(1/x) ; \quad x \neq 0\\
+    \ 0 \quad  {se} \quad x = 0\\
+\end{cases}
+\]
+\end{exemplo}
+
+\begin{align*}
+    Se \ x \neq 0 \ tem-se: \textit{f'}(x) = \frac{1}{2} + 2x.sen\frac{1}{x} - \frac{\cancel{x^2}cos\frac{1}{x}}{\cancel{x^2}}\\
+    se \ x=0 \ \ \ tem-se: \textit{f'}(0) = \displaystyle\lim_{x \to 0} \frac{f(x) - f(0)}{x}\\
+    se \ x=0 \ \ \ tem-se: \textit{f'}(0) = \displaystyle\lim_{x \to 0} \frac{f(x) - f(0)}{x}\\
+    \lim_{x\to 0} \frac{1}{2} + x.sen \frac{1}{x} = \frac{1}{2} + \underbrace{\lim_{x\to 0} x.sen \frac{1}{x}}_{= \ 0} = \frac{1}{2}
+\end{align*}
+\[0 \ \leq \ | \ x.sen \ \frac{1}{x} \ | \ \leq \ |x|\]
+
+$\therefore$ \textit{f'} é diferenciável em $\mathbb{R}$ com $f'(0) = \frac{1}{2} > 0$.
+Observe que \textit{f'} não é contínua na origem pois $cos \ \frac{1}{x}$ diverge quando $x \rightarrow 0.$ \ Alternativamente, observe que para $x_n = \frac{1}{2n \pi } \pi $
+
+tem-se: 
+\[\left.\
+\begin{array}{c}
+sen \frac{1}{x_n} = sen 2n \pi = 0\\
+cos \frac{1}{x_n} = cos 2n \pi = 1 
+\end{array}
+\right\}\forall n \in \mathbb{R}\]
+
+\begin{align*}
+    \therefore \  \textit{f'} (x_n) = \frac{1}{2} - 1 = - \frac{1}{2} \ \  \forall n \in \mathbb{N}\\
+    \therefore x_n \rightarrow 0, \text{mas}, f' (x_n) = -\frac{1}{2}  \rightarrow \textit{f'}(0) = \frac{1}{2}\\
+\end{align*}
+
+% ===========================PAG_13===============================
+\pagebreak
+
+\[
+g(x) = \frac{x}{2} + x^2 = x(x +\frac{1}{2})
+\]
+\[
+h(x) = \frac{x}{2} - x^2 = -x(x -\frac{1}{2})
+\]
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{Figuras_Graficos/Grafico pag 13.png}
+\end{figure}
+
+\begin{align*}
+    g'(x) = \frac{1}{2} + 2x \Rightarrow g'(0) = \frac{1}{2}\\
+    h'(x) = \frac{1}{2} - 2x \Rightarrow h'(0) = \frac{1}{2}
+\end{align*}
+
+$\therefore$ Em qualquer intervalo (-a,a) com $a>0$ \textit{f} \underline{não} é monótona   
+
+\begin{align*}
+    \underbrace{2n \pi}_{\frac{1}{d}} \ < \ \underbrace{2n\pi + \frac{\pi}{2}}_{\frac{1}{c}} \ < \ \underbrace{2(n+1) \pi}_{\frac{1}{b}} \ < \ \underbrace{2(n+1) \pi + \frac{\pi}{2}}_{\frac{1}{a}}\\
+    sen \frac{1}{d} = \ \ sen \frac{1}{b} = 0; \ \  sen \frac{1}{c} = \ \ sen \frac{1}{a} = 1
+\end{align*}
+
+\[f(a) = \frac{a}{2} + a^2; \ \ \ \ \ \ f(c) = \frac{c}{2} + c^2\]
+\[f(b) = \frac{b}{2}; \ \ \ \ \ \ \ \ f(d) = \frac{d}{2}   \]
+
+% ===========================PAG_14===============================
+\pagebreak
+
+\subsection*{Teorema de Darboux:}
+
+Seja $f: [a, b] \rightarrow \mathbb{R}$ uma função diferenciável com $f'(a) < d < f'(b)$.\\
+Então, existe $c \in (a, b)$ tal que $f'(c) = d$.
+
+\begin{proof}\mbox{}\\*
+Seja $g(x) = f(x) - dx$.
+
+então, $ g'(x) = f'(x) - d$, com $g'(a)<0<g'(b)$.
+
+Pelo Teorema anterior, existe $\delta > 0$ tal que:
+
+\[
+x \in (b-\delta,\delta) \Rightarrow g(x) < g(b)
+\]
+Como também:
+\[
+x \in (a,a+\delta) \Rightarrow  g(x) < g(a)
+\]
+
+Agora, g contínua $\Rightarrow$ atinge um valor mínimo, ou seja, existe $c \in [a,b]$ tal que $g(c) \leq g(x), \forall x \in [a,b]$
+
+\begin{center}
+$(1) + (2) \Rightarrow c \notin [a,b] \Rightarrow c \in (a,b)$.
+\end{center}
+
+Como $g$ é diferenciável, deve ser 
+\[
+g'(c) = 0 \therefore 0 = g'(c) = f'(c) - d \Rightarrow f'(c) = d
+\]
+\end{proof}
+
+
+% ===========================PAG_15===============================
+\pagebreak
+
+\[
+    S_n = 1 + a + a^2 + ... + a^n = \sum_{i=0}^{n} a^i
+\]    
+
+Multiplicando a equação por $a$ temos:
+
+\[
+    aS_n = a + a^2 + ... + a^n + a^{n+1}
+\]
+
+Ao realizar a subtração das duas equacões temos:
+
+\[
+    aS_n = 1 + a^{n+1}
+\]
+
+\[
+    \therefore (1-a)S_n = 1-a^{n+1} \Rightarrow
+\]
+
+\[
+    \Rightarrow  S_n = \frac{1-a^{n+1}}{1-a} \Rightarrow
+\]
+
+\[
+    \Rightarrow \frac{1}{a-1} = \underbrace{1 + a + ... + a^n}_{S_n = \sum_{i=0}^{n} a^n} + \frac{a^{n+1}}{1-a}
+\]
+
+Trocando a por $-x^2$, tem-se:
+
+\[
+\frac{1}{1+x^2} = \sum_{i=0}^{n} (-x^{2})^i + \frac{(-x^2)^{n+1}}{1+x^2}
+\]    
+
+Ou
+
+\[
+  \frac{1}{1+x^2}  = \sum_{i=0}^{n} [(-1)^i+x^{2i}] + \frac{(-1)^{n+1}x^{2n+2}}{1+x^2}
+\]
+
+\begin{theorem}
+    $arctg x = \underbrace{\sum_{i=0}^n[(-1)^i \frac{x^{2i+1}}{2i+1}]}_{=P_{2n+1(x)}}  + R_{2n+1}(x)$
+\end{theorem}
+
+\begin{proof}
+    Basta provar que: $\lim_{x \rightarrow 0} \frac{arctgx - P_{2n+1}(x)}{x^{2n+1}} = 0$. \\
+    Usando a regra de L'Hôpital, tem-se:
+
+    \begin{align*}
+    \frac{arctan'x - P_{2n+1}'(x)}{(2n+1)x^{2n}} &= \frac{1}{(2n+1)x^{2n}}\left[\frac{1}{1+x^2} - \sum_{i=0}^n{(-1)^i x^{2i}}\right] \\
+    &= \frac{(-1)^{n+1} x^{2n+2}}{(2n+1) x^{2n} (1+x^2)} \\
+    &= \frac{(-1)^{n+1} x^2}{(2n+1)(1+x^2)}\frac{(-1)^{n+1} x^2}{(2n+1)(1+x^2)} \rightarrow 0. 
+    \end{align*}
+\end{proof}
+
+% ===========================PAG_16===============================
+Por outro lado, trocando $a$ por $-x$, tem-se:
+
+$$
+\frac{1}{1+x} = \sum^n_{i=0}(-x)^i + \frac{-x^{n+1}}{1+x} = \sum^n_{i=0}(-1)^ix^i+\frac{-1^{n+1}x^{n+1}}{x+1}
+$$
+
+\begin{theorem}
+\[ ln(1+x) = \sum^n_{i=0}(-1)^i\frac{x^{i+1}}{i+1}+R_{n+1}(x) \]
+\end{theorem}
+
+\begin{proof}\mbox{}\\*
+Usando a regra de L'Hôpital, tem-se: 
+\[
+\frac{\ln'(1+x) - P'_{n+1}(x)}{(n+1)x^n} = \frac{1}{(n+1)x^n}\left[\frac{1}{1+x} - \sum_{i=0}^{n}(-1)^ix^i\right] =
+\]
+
+\[
+\frac{(-1)^{n+1}x^{n+1}}{(n+1)x^n(1+x)} = \frac{(-1)^{n+1}x}{(n+1)(1+x)} \rightarrow 0 \qedhere
+\]
+\end{proof}
+
+
+
+\begin{exercise}{Aproximação $\pi$}{ex:mylabel}
+Usando a expressão integral para o resto, aproximando a integral por somas de Riemann, demonstre correções para $\pi$ do tipo madhava (escola de Kerala): Resto de $\arctan$ igual a $(-1)^nF(n)$, onde $F=F_i$ com:
+$$
+F_1(n) = \frac{1}{4n},
+F_2(n) = \frac{n}{4n^2+1},
+F_3(n) = \frac{n^2 + 1}{4n^3+5n},
+$$
+\end{exercise}
+
+% ===========================PAG_17===============================
+\pagebreak
+
+\begin{lemma}
+Se $\lim\limits_{x \to \infty} f(x+1) - f(x) = k$, então $\lim\limits_{x \rightarrow \infty}\frac{f(x)}{x} = k$.
+\end{lemma}
+
+\begin{proof}\mbox{}\\
+Seja $\epsilon > 0$. Por hipótese, $\exists N=N(\epsilon)$ tal que:
+
+\[ 
+x \geq N \implies |f(x+1) - f(x) -k| < \epsilon
+\]
+
+\[
+k - \epsilon < f(x+1) - f(x) < k + \epsilon
+\]
+
+Em particular, tomando $x=N, N+1, \ldots, N+n$, com $n \in \mathbb{N}$
+. Tem-se:
+
+\[
+  n(k - \epsilon) < \sum_{i=0}^{n-1}f(N+i+1) + f(N+i) < n(k+\epsilon)
+\]
+
+\[
+  -\epsilon < \frac{f(N+n) - f(N)}{n} - k < \epsilon
+\]
+
+e tem-se $|\alpha|<\epsilon$ $\forall n \in \mathbb{N}$. Agora:
+
+\[
+\frac{f(N+n)-f(N)}{n}-k = \alpha \implies f(N+n) = f(N) + n(\alpha+k)
+\]
+
+\[
+f(x) = f(N) + (x-N)(\alpha+k)
+\]
+
+\[
+\therefore \frac{f(x)}{x} = \frac{f(N)}{x}+(1-\frac{N}{x})(\alpha+k)
+\]
+
+\[
+\frac{f(x)}{x}-k = \frac{f(N)}{x} + (1 - \frac{N}{x})\alpha - \frac{N}{x}k
+\]
+
+\[
+\therefore |\frac{f(x)}{x} - k| \le c |\alpha| < \epsilon \qed
+\]
+
+\end{proof}
+
+% ===========================PAG_18===============================
+\pagebreak
+
+\begin{exemplo}
+    \[
+    log(x+1) - log{x} = log(\frac{x+1}{x}) = log(1+ \underbrace{\frac{1}{x}}_{\rightarrow{0}}) 
+    \]
+    \[
+    \text{converge para} \log1 = 0 \quad \text{quando} \quad x \rightarrow{+\infty}.
+    \]
+    \[
+    \therefore \frac{\log{x}}{x} \rightarrow{0}\; \text{se}\; x \rightarrow{+ \infty}
+    \]
+    
+\end{exemplo}
+
+
+
+\underline{Observação}: O mesmo resultado do lema vigora se em lugar de $\rightarrow{k}$ tem-se $\rightarrow{\pm\infty}$. Com efeito, dado
+
+\[M>0\;\; \exists\; N = N(\varepsilon) \in \mathbb{N}\; \text{tal que}\; x \geq N \Rightarrow f(x+1)-f(x)>M\]
+
+\[\therefore \underbrace{\frac{f(N+n)-f(N)}{n}}_{=: \alpha} >n\;\; \forall n \in \mathbb{N}.\]
+
+\[\frac{f(N+n)-f(N)}{n} = \alpha \Rightarrow f(N+n) = f(N) + \overbrace{n\alpha}^{= x-N} \Rightarrow\]
+
+\[\frac{f(x)}{x} = \underbrace{\frac{f(N)}{x}}_{\rightarrow{0}} + \underbrace{(1-\frac{N}{x})}_{\rightarrow{1}} \underbrace{\alpha.}_{>n\; \forall n} \qed\]
+
+ 
+\begin{exemplo}
+    $e^{x+1}-e^{x} = (e-1)e^{x} \rightarrow + \infty\; \text{se}\; x \rightarrow +\infty$.
+\end{exemplo}
+
+
+\[\therefore \lim_{x \rightarrow +\infty} \frac{e^{x}}{x} = +\infty.\]
+
+
+Observe que tomando $x = e^{y}$ no exemplo anterior tem-se:
+
+\begin{equation*}
+    \frac{\log{e^{y}}}{e^{b}} = \frac{y}{e^{y}} \rightarrow 0\; se\; y \rightarrow +\infty
+\end{equation*}
+
+% ===========================PAG_19===============================
+\pagebreak
+
+\subsection*{Seja $f:\mathbb{R} \rightarrow \mathbb{R}$ com as seguintes propriedades:}
+
+\begin{enumerate}
+\item Monotonicidade: $x<y \Rightarrow f(x) < f(y)$
+\item Morfismo aditivo: $f(x+y) = f(x) + f(y)\;\; \forall x, y \in \mathbb{R}$
+\end{enumerate}
+
+\subsection*{1. Prove que $f(0) = 0$.}
+
+\[f(0) = f(0+0) = f(0)+f(0) = 2f(0)\]
+
+\[\therefore f(0) \neq 0 \Rightarrow 1 = 2,\; \text{absurdo!}\; \therefore\; \text{deve ser}\; f(0) = 0.\]
+
+\subsection*{A. Prove que $f$ é contínua em $\mathbb{R} \Leftrightarrow f$ é contínua na origem.}
+
+\[(\cancel{a}) \stackrel{?}{=} \lim_{h \rightarrow 0} f(a+h) = \lim_{h \rightarrow 0} f(a)+f(h)\]
+
+\[= f(\cancel{a}) + \lim_{h \rightarrow 0} f(h) \Leftrightarrow \lim_{h \rightarrow 0} f(h) = 0.\]
+
+\subsection*{2. Prove que $f(m) = mf(1)\; \forall m \in \mathbb{N}$}
+
+\[f(m) = f \underbrace{(1+...+1)}_{m\; vezes} = f(1)+...+f(1) = mf(1).\]
+
+\begin{corollary}
+$f(1) \neq 0$
+\end{corollary}
+
+
+\begin{proof}\renewcommand{\qedsymbol}{}
+\[0<x<m \Rightarrow 0 = f(0) < f(x) < f(m) = mf(1) = 0.\]
+Seja $a := f(1) \neq 0.$
+\[x<1+x \Rightarrow f(x) < f(1)+f(x) = a+f(x) \Rightarrow \fbox{$0<a$}\]
+\end{proof}
+
+% ===========================PAG_20===============================
+\pagebreak
+\subsection*{3. Prove que $f( \frac{1}{n} )  = \frac{a}{n} \ \ \forall \ n \in \mathbb{N}:$ }
+\begin{align*}
+a &= f(1) = f(\frac{n}{n}) = f(\underbrace{\frac{1}{n} + ... + \frac{1}{n}}_\text{n vezes}) = f(\frac{1}{n}) + ... + f(\frac{1}{n}) \\
+ &= n \ f(\frac{1}{n}) \ \therefore \ f(\frac{1}{n}) = \frac{a}{n}
+\end{align*}
+
+\subsection*{B. Prove que $f$ é contínua na origem:}
+\[
+\lim_{u\rightarrow 0} f(u) = f(0) = 0 \Leftrightarrow \forall \ \varepsilon > 0 \ \exists \ \delta > 0 : 0 < \left | x \right | < \delta \Rightarrow \left | f(x) \right | < \varepsilon
+\]
+\[
+0 < x < \frac{1}{n} \Rightarrow 0 = f(0) < f(x) < f(\frac{1}{n}) = \frac{a}{n} \overset{?}{<} \varepsilon
+\]
+\[
+\text{Dado} \ \varepsilon > 0 \ \text{seja} \ n \in \mathbb{N}: n > \frac{a}{\varepsilon }
+\]
+\[
+\therefore \ \text{Basta tomar} \ \delta = \frac{1}{n}
+\]
+\[
+0 = f(0) = f(x-x) = f(x) + f(-x) \Rightarrow f(-x) = -f(x)
+\]
+\[
+\therefore -\frac{1}{n} < x < 0 \Rightarrow 0 < -x < \frac{1}{n} \Rightarrow \left | f(x) \right | = \left | -f(x) \right | = \left | f(-x) \right | < \varepsilon
+\]
+
+\vspace{1em}
+\subsection*{4. Prove que $f(r) = ar \ \ \forall \ r \in \mathbb{Q}:$} Basta combinar 1, 2, 3.
+\[f(\frac{m}{n}) = f(\underbrace{\frac{1}{n} + ... + \frac{1}{n}}_\text{m vezes}) = m f(\frac{1}{n}) = \frac{ma}{n}.\]
+
+\vspace{1em}
+\subsection*{5. Prove que $f(x) = ax \ \ \forall \ x \in \mathbb{R}:$}
+\[
+f(x) < ax \Rightarrow \frac{f(x)}{a} < x \therefore \exists \ r \in \mathbb{Q}: \frac{f(x)}{a} < \underbrace{r < x}_{\Rightarrow \ \fbox{$f(r) <  f(x)$}\ \circledast}
+\]
+\[
+f(x) < ar \overset{\text{\textcircled{4}}}{=} f(r) \ \text{contradiz} \circledast. \
+\]
+
+\[
+\text{Analogamente prova-se que} \ ax < f(x) \ \text{conduz a contradição.}
+\]
+
+\[
+\therefore \text{deve ser} \ f(x) = ax
+\]
+
+% ===========================PAG_21===============================
+\pagebreak
+
+\scalebox{2}{\ding{172}} \textbf{Vide: RUDIN: Princ. Math. Analysis Capítulo 5 Exercício 22}
+
+Seja $f$ definida em $\mathbb{R}$. Se  $f$ é diferenciável com $f'(t) \neq  1  \forall  t \in x$, então $f$ possui \underline{no máximo} apenas um ponto fixo, ou seja, um ponto x tal que $f(x) = x$.
+
+\begin{proof}
+ Por redução ao absurdo suponha que existem $u$ e $v$ pontos fixos com $u \neq v$. Pelo Teorema do Valor Médio existe $g \in (u,v)$ tal que 
+ \[f'(g) = \frac{ f(v) - f(u)} { v - u} = \frac{v - u}{v - u} = 1\] que  caracteriza um absurdo
+\end{proof}
+
+Uma função se diz de Lipchitz se existe $\lambda \geq 0$ tal que,
+
+\[
+|f(x) = f(y)| \leq \lambda |x-y| ,  \forall x,y \in \mathbb{R}
+\].
+
+O menor de tais $\lambda$ se diz a constante de Lipchitz de $f$. Se $\lambda < 1$, então $f$ se diz uma \underline{contração}.
+
+\begin{exemplo}
+Se $f$ é diferenciável e existe $A < 1$ tal que $|f'(t)| \leq A \forall t \in \mathbb{R}$, então $f$ é uma contração. Com efeito, pelo Teorema do Valor Médio, existe $\delta \in (x,y)$ tal que: 
+\end{exemplo}
+
+\[
+\frac{|f(y) = f(x)|}{|y-x|} = |\frac{f(b)-f(x)}{y-x}| = |f'(x)| \leq A \xrightarrow{}
+\]
+
+\[
+\xrightarrow{}  |f(y) - f(x)|  \leq A - |y - x|
+\].
+
+% ===========================PAG_22===============================
+\pagebreak
+\scalebox{2}{\ding{173}}
+
+\paragraph{}
+Em um espaço métrico \(f\) é uma contração se:
+
+\[
+d( f(x), f(y) ) \leq A \cdot d(x, y).
+\]
+
+Observe que:
+\[
+d(x, y) \leq d( x, f(x) ) + \underbrace{d( f(x), f(y) )}_{\leq A \cdot d(x, y)} + d ( f(y), y ).
+\]
+
+\[
+\therefore\quad d(x, y) \leq \frac{d(x, f(x)) + d(f(y), y)}{1 - A}. 
+\]
+
+Em particular, se $x$ e $y$ são pontos fixos, ou seja $f(x) = x$ e $f(y) = y$, então:
+
+\[
+0 \leq d(x, y) \leq \frac{\overbrace{d(x, x)}^{=0} + \overbrace{d(y, y)}^{=0}}{1-A}. \quad \Rightarrow
+\]
+
+\[
+\Rightarrow \quad d(x, y) = 0 \Rightarrow x = y  \quad \therefore \quad \text{Um ponto fixo deve ser único.}
+\]
+
+Seja \(x_n\) definida, $x_0$ é arbitrário e $\forall n \in \mathbb{N}$.
+
+\[
+\ x_n = f(x_n -1).
+\]
+
+\begin{theorem}
+    Existe $x := \lim_{n \to \infty} x_n$ e $x$ é um ponto fixo de $f$.
+\end{theorem}
+    
+\[
+x_n = f(x_{n-1}) = f^2(x_{n-2}) = \ldots = f^n(x_0).
+\]
+
+\begin{align*}
+    \therefore\quad d(x^n, x^m) &\leq d(f^n(x_0), f(f^n(x_0)) + d(f(f^m(x_0)), f^m(x_0)).{x\frac{1}{1-A}} \\
+    &\leq \mathrm{Ad}(x^{n-1}, x^n) + \mathrm{Ad}(x^m, x^{m-1}). \\
+    &\leq A^n \mathrm{d}(x_0, f(x_0)) + A^m \mathrm{d}(f(x_0), x_0). \\
+    &\leq \frac{A^n + A^m}{1 - A} \quad \mathrm{d}(x_0, f(x_0)). \\
+    &\quad \rightarrow \quad 0, \quad \text{pois } A^n, A^m \rightarrow 0 \text{, dado que } A < 1.
+\end{align*}
+
+% ===========================PAG_23===============================
+\pagebreak
+
+\begin{lemma}
+$\forall n \in \mathbb{N}$ tem se:
+\[
+d(x_{n-1},x_n)\leq A^n d(f(x_0),x_0)
+\]
+\end{lemma} 
+
+\begin{proof}\mbox{}\\
+Por indução em $n$. Se $n=0$ , então:
+\[
+d(x_1,x_0)=d(f(x_0),x_0)=A^0 d(f(x_0),x_0).
+\]
+Agora, 
+
+\begin{align*}
+d(x_{n+2},x_{n+1}) &= d(f(x_{n+1}),f(x_n)) \\
+&\leq A d(x_{n+1},x_n) \\
+&\leq A \cdot A^nd(f(x_0),x_0)  \\
+&= A^{n+1}d(f(x_0),x_0). \\
+\end{align*}
+\end{proof}
+
+\begin{lemma}
+Seja $n \in \mathbb{N}$. Então $\forall k \in \mathbb{N}$ tem se: 
+\[
+d(x_{n+k},x_n) \leq \frac{A^n}{1-A}d(f(x_0),x_0).
+\]
+\end{lemma}
+
+\begin{proof}
+\begin{align*}
+d(x_{n+k},x_n)&\leq d(x_{n+k},x_{n+k-1})d(x_{n+k-1},x_{n+k-2})+...+\\
+&+d(x_{n+k-(k-1)},x_{n+k-k})\\
+\xrightarrow{lema\ \text{anterior}}&\leq \underbrace{(A^{n+k-1}+A^{n+k-2}+\ldots+A^n)}_{\text{$A^n(A^{k-1}+A^{k-2}+\ldots+1) = A^n\frac{1-A^k}{1-A}$}}d(f(x_0),x_0)\\
+&\leq\frac{A^n}{1-A}d(f(x_0),x_0).
+\end{align*}
+\end{proof} 
+
+% ===========================PAG_24===============================
+\pagebreak
+
+\begin{corollary}
+    ${x_n}$ é de Cauchy
+    Se  $m > n$ , então $m = n + k$.
+\end{corollary}
+
+
+\begin{equation*}
+\therefore d({x_m},{x_n}) \leq \frac{A^n}{1-A} \quad d({f(x_0)}, {x_0}) \rightarrow 0 \quad \text{se} \quad n \rightarrow \infty
+\end{equation*}
+
+Logo, existe o limite $ x = \lim_{n \to \infty}{x_n}$ ,  e tem-se que:
+
+\begin{gather*}
+f(x) = f(\lim_{n \to \infty}{x_n}) \underset{\text{f contínua}}{=} \lim_{n \to \infty}{f({x_n})} = \lim_{n \to \infty}{x_{n+1}} = x
+\end{gather*}
+
+Observação : tomando para $m \rightarrow \infty $ na sua identidade:
+\begin{align*}
+&d({x_m},{x_n}) \leq \frac{A^n}{1-A} d({f(x_0)}, {x_0}) \quad \text{tem-se:} \\
+&d({x},{x_n}) \leq \frac{A^n}{1-A} d({f(x_0)}, {x_0}) \quad \text{taxa de convergência}
+\end{align*}
+
+\underline{Unicidade}: Se $x = f(x) \quad \textbf{e} \quad y = f(y)  \quad  \text{então :}$
+\[
+d(x,y) = d(f(x),f(y)) \leq  A d(x,y)
+\]
+\[
+\text{Se}\quad d(x,y) \neq 0 \rightarrow A \geq 1 \quad \text{absurdo} \quad \therefore d(x,y) = 0 \rightarrow x = y
+\]
+
+\end{document}
